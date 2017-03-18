@@ -2,10 +2,7 @@
 public class CBR {
 	public static void main(String[] args){
 		CBRC Test = new CBRC("TRAVEL.csv");
-		Test.DealFile("TRAVEL.csv");
-		System.out.println(Test.Season.indexOf("July"));
-		
-		
-		
+		System.out.println(Test.DataArr.size());
+		System.out.println(Test.DataArr.get(Test.CountCBR("Skiing", 589, 4, "Car", 7, "January").get(2).getKey()).CaseName);
 	}
 }

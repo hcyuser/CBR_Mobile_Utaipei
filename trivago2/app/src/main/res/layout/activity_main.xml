@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aurora"
+    tools:context="com.example.changhsinjung.trivago.MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/intro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Welcome to ezcome ezgo, in \n here, you can find the best \n trip in the world. Have a \n nice day!\n"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:typeface="monospace"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="26dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_weight="0.20"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/way"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:text="請選擇旅行型態:"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="177dp" />
+
+            <Spinner
+                android:id="@+id/chooseway"
+                android:layout_width="191dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.00"
+                tools:layout_editor_absoluteX="131dp"
+                tools:layout_editor_absoluteY="180dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:layout_width="118dp"
+                android:layout_height="match_parent"
+                android:text="價格範圍:"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="250dp" />
+
+            <EditText
+                android:id="@+id/money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="86dp"
+                tools:layout_editor_absoluteY="200dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2.10"
+                android:text="人數:"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="247dp" />
+
+            <EditText
+                android:id="@+id/people"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.00"
+                android:ems="10"
+                android:inputType="number"
+                tools:layout_editor_absoluteX="65dp"
+                tools:layout_editor_absoluteY="247dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="0.05"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <TextView
+                android:id="@+id/vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.79"
+                android:text="交通方式:"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="284dp" />
+
+            <Spinner
+                android:id="@+id/choosevehicle"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.00"
+                tools:layout_editor_absoluteX="84dp"
+                tools:layout_editor_absoluteY="284dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="410dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2.39"
+                android:text="天數:"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="314dp" />
+
+            <EditText
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.00"
+                android:ems="10"
+                android:inputType="date"
+                tools:layout_editor_absoluteX="62dp"
+                tools:layout_editor_absoluteY="314dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="408dp">
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="33dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.01"
+                android:text="月份:"
+                android:textColor="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="343dp" />
+
+            <Spinner
+                android:id="@+id/choosemonth"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="62dp"
+                tools:layout_editor_absoluteY="343dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="search" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

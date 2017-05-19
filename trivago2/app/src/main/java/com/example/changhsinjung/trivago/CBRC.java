@@ -2,6 +2,9 @@ package com.example.changhsinjung.trivago;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -14,14 +17,16 @@ public class CBRC {
 	static ArrayList<String> TT;
 	static HashSet<String> Seasonset = new HashSet<>();
 	static ArrayList<String> Season;
-	CBRC(String filename){
+	CBRC(InputStream filename){
 		DealFile(filename);
 	}
 
-	public static void DealFile(String filename){
+	public static void DealFile(InputStream filename){
 		try {
-			FileReader fr=new FileReader(filename);
-			BufferedReader br=new BufferedReader(fr);
+
+
+			Reader in2 = new InputStreamReader(filename);
+			BufferedReader br=new BufferedReader(in2);
 			while(br.ready()){
 				String t = br.readLine();
 				if(!t.equals("")){

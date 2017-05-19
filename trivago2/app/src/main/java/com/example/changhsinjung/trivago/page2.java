@@ -6,6 +6,9 @@ import android.widget.Button;
 import android.view.View;
 import android.widget.EditText;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 public class page2 extends AppCompatActivity {
     @Override
     public void onBackPressed() {
@@ -30,6 +33,16 @@ public class page2 extends AppCompatActivity {
         String choosevehicle = bundle.getString("choosevehicle");
         String choosemonth = bundle.getString("choosemonth");
         final EditText result = (EditText) findViewById(R.id.result);
+
+        try {
+            InputStream is = getResources().getAssets().open("TRAVEL.csv");
+            CBRC Test = new CBRC(is);
+            result.setText(Test.DataArr.get(Test.CountCBR("Skiing", 589, 100, "Plane", 7, "January").get(2).getKey()).CaseName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
 
     }
 

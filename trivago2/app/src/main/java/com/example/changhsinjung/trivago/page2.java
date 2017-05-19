@@ -46,6 +46,8 @@ public class page2 extends AppCompatActivity {
                     "\nPeople:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).NumberOfPersons+
                     "\nPrice:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).Price
             );
+            result.setFocusable(false);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

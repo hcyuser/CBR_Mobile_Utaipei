@@ -37,7 +37,15 @@ public class page2 extends AppCompatActivity {
         try {
             InputStream is = getResources().getAssets().open("TRAVEL.csv");
             CBRC Test = new CBRC(is);
-            result.setText(Test.DataArr.get(Test.CountCBR("Skiing", 589, 100, "Plane", 7, "January").get(2).getKey()).CaseName);
+            result.setText("HolidayType:"+
+                    Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).HolidayType+
+                    "\nHotel:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).Hotel+
+                    "\nRegion:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).Region+
+                    "\nSeason:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).Season+
+                    "\nTransportatopn:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).Transportation+
+                    "\nPeople:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).NumberOfPersons+
+                    "\nPrice:"+Test.DataArr.get(Test.CountCBR(chooseway, money, people, choosevehicle, day, choosemonth).get(0).getKey()).Price
+            );
         } catch (IOException e) {
             e.printStackTrace();
         }
